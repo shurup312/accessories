@@ -1,0 +1,261 @@
+/* общее */
+html, body {
+    background-image: url(/images/admin/design/a.jpg);
+    background-size: cover;
+    background-color: #54364A;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    min-width: 940px;
+}
+
+.page_content {
+    color: #FFFFFF;
+}
+
+.widget-breadcrumbs {
+    padding: 10px 15px;
+    margin: 0 0 10px;
+}
+
+/* сообщения */
+.error {
+    color: #ffaaaa;
+    font-size: 14px;
+    clear: both;
+}
+
+.error:before {
+    content: "Ошибка: ";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ok {
+    color: #aaffaa;
+    font-size: 14px;
+    clear: both;
+
+}
+
+.ok:before {
+    content: "Сообщение: ";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* интуитивно-понятные */
+.float-left{
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clear-both:after {
+    clear: both;
+}
+.separator {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 10px;
+}
+.padding-10-20 {
+    padding: 10px 20px;
+}
+.bg-45 {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.bg-25 {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.bg-10 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.width-75 {
+    width: 75%;
+}
+.width-25 {
+    width: 25%;
+}
+.width-100 {
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.border-all {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.border-botton-none {
+    border-bottom: 0;
+}
+
+/* форма редактирования */
+.control-label{
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 90%;
+    margin-right: 10%;
+    font-weight: bold;
+}
+.form-group *{
+    width: 50%;
+}
+
+/* элементы */
+button {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45) !important;
+}
+
+a {
+    color: #eef;
+}
+
+legend {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color rgba(255, 255, 255, 0.2);
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 21px;
+    line-height: inherit;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+}
+input,textarea {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    min-height: 30px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+/* таблица */
+table thead th, table tfoot th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 18px 3px 10px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+table .dataTable-actions {
+    width: 160px
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+th, td, label {
+    color: #fff;
+}
+
+th {
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+}
+
+table .dataTable-sort {
+    width: 50px;
+}
+
+table .dataTable-id {
+    width: 40px;
+}
+
+table .dataTable-checkboxes {
+    width: 20px;
+}
+
+/* в целом по дизайну стили */
+
+.admin-title {
+    width: 100%;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.admin-right-panel {
+    width: 80%;
+    float: right;
+}
+
+.admin-left-panel {
+    width: 19%;
+    float: left;
+}
+
+.admin-left-panel-title div {
+    margin: 7px 15px;
+}
+
+.admin-left-panel-title {
+    width: 100%;
+    font-size: 18px;
+}
+
+.admin-left-panel-menu {
+    width: 100%;
+    min-height: 100px;
+    border-top: 0;
+}
+
+.admin-title-login div {
+    font-size: 14px;
+    text-align: right;
+    width: 300px;
+    margin: 10px 20px;
+}
+
+/* страница list */
+.list-content, .list-table-menu {
+    padding: 20px 15px 15px;
+}
+
+.list-table-panel {
+    margin: 0px 0px 15px;
+}
+
+/* пагинация */
+.list-paginate-active {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.list-pagination-button {
+    color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+/* селект выбора страниц */
+.list-onPage-select {
+    width: 70px;
+    height: 26px;
+    padding: 3px;
+    margin-top: 8px;
+}

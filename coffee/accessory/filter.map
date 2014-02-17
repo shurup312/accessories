@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "filter.js",
+  "sourceRoot": "",
+  "sources": [
+    "filter.coffee"
+  ],
+  "names": [],
+  "mappings": ";AACA;CAAA,CAAA,CACoB,GADpB,CAAO,EAAP,YAAA;GAEI,EAAA,IAAC,EAAD;CACE,GAAG,EAAH,OAAA;CAAA,cAAe;MAAf,EAAA;CAAA,cAA0B;QAD5B;CADgB,IAChB;CAFJ,EACoB;CADpB"
+}

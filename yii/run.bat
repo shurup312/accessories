@@ -1,0 +1,1 @@
+C:/xampp/php/php.exe C:/xampp/www/accessories/yii/framework/yiic.php webapp C:/xampp/www/accessories/

@@ -1,0 +1,10 @@
+{
+  "name": "accessories",
+  "version": "0.0.1",
+  "description": "CMS",
+  "devDependencies": {
+    "gulp": "~3.3.4",
+    "gulp-util": "~2.2.10",
+    "gulp-coffee": "~1.2.5"
+  }
+}
