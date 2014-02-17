@@ -35,7 +35,7 @@
       <file leaf-file-name="detail.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
+            <state line="15" column="20" selection-start="384" selection-end="384" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
               <folding />
             </state>
           </provider>
@@ -842,7 +842,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
+        <state line="15" column="20" selection-start="384" selection-end="384" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
           <folding />
         </state>
       </provider>
