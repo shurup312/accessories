@@ -13,7 +13,7 @@
 				<tr>
 					<th colspan="5"></th>
 				</tr>
-			</tfoot>
+			</tfoot>1
 			<tbody>
 				<tr ng-repeat="detail in details">
 					<td class="width-25">{{detail.title}}</td>
