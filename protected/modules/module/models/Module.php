@@ -123,7 +123,7 @@ class Module extends CActiveRecord {
 		try {
 			$db       = $this->getDb();
 			$query    = $db->createCommand()->select(
-							 'tab.id tab_id, tab.name tab_name, mod_p.table param_table, mod_p.field param_field, mod_p.type field_type, param.name field_description, mod_p.exp exp, mod_p.exp_description'
+							 'tab.id tab_id, tab.name tab_name, mod_p.table param_table, mod_p.field param_field, mod_p.type field_type, mod_p.available_null, mod_p.callback, param.name field_description, mod_p.exp exp, mod_p.exp_description'
 			)              	->from('module obj') // извлекаем сам объект
 							 ->join('module typ', 'typ.object_id = obj.type_id and typ.type_id=4') // извлекаем закладки типа объекта
 							 ->join('module tab', 'typ.id = tab.parent_id and tab.type_id=2') // извлекаем тип объекта
@@ -233,7 +233,7 @@ class Module extends CActiveRecord {
 	}
 
 	/**
-	 * @param $data   Массив данных для обновления в виде
+	 * @param $data   array Массив данных для обновления в виде
 	 *                table=>array(
 	 *                field=>value
 	 *                ...
@@ -312,6 +312,18 @@ class Module extends CActiveRecord {
 		$db = $this->getDb();
 		return $db->createCommand()->select('*')->from('module m')->join('module_type mt', 'mt.id = m.type_id')
 					 ->where('m.id=:id', array (':id' => $id))->queryRow();
+	}
+
+	/**
+	 * @param $id
+	 * @internal param $data
+	 * @internal param $db
+	 * @return mixed
+	 */
+	public function getType ($type_id) {
+		$db = $this->getDb();
+		return $db->createCommand()->select('*')->from('module_type mt')
+					 ->where('mt.id=:type_id', array (':type_id' => $type_id))->queryRow();
 	}
 
 	/**

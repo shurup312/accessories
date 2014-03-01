@@ -39,14 +39,42 @@ elements =
       class:'dataFields'
       title:data.field_hint
     ).html data.value
-    console.log data
     # получаем outerHTML
     html.clone().wrap('<p>').parent().html()
-
-dataSave =
-  get : ->
-    val = {}
-    $('.dataFields').each(->
-      val[this.id] = this.value
+  file:(data)->
+    input_img = $("<input/>",
+      type:'file'
+      id:data.field+'_input'
+      name:data.field
+      class:'dataFields'
+      title:data.field_hint
+      'ng-model':"files."+data.field
     )
-    val
+    div = $("<div/>",
+      id:data.field+'_setimage'
+    )
+    form = $('<form></form>',
+      id:data.field+'_form'
+      method:'post'
+      action:'/accessory/data/upload'
+      enctype:'multipart/form-data'
+      target:data.field+'_frame'
+    ).append input_img
+
+    frame = $('<iframe></iframe>',
+      src:''
+      name:data.field+'_frame'
+      id:data.field+'_frame'
+      width:500
+      height:100
+    ).css('display','none')
+
+    div = $('<div></div>').html(div).html()
+    frame = $('<div></div>').html(frame).html()
+    form = $('<div></div>').html(form).html()
+
+    # получаем outerHTML
+    div+form+frame
+
+
+

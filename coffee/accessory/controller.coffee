@@ -53,11 +53,23 @@ AccessoryNewCtrl = ($scope,$routeParams, AccessoryAdd, AccessoryBreadcrumbs, $ti
         )
     )
 
-AccessoryEditCtrl = ($scope, $routeParams,AccessoryEdit,AccessoryBreadcrumbs, $timeout)->
+AccessoryEditCtrl = ($scope, $routeParams,AccessoryEdit,AccessoryBreadcrumbs, $timeout,$compile)->
+  $scope.fields  = {}
+  $scope.files = []
+
   AccessoryEdit.get
     id:$routeParams.id
     (ok)->
       $scope.data = ok
+      for tab in ok
+        for i in tab.params
+          $scope.fields[i.field] = i
+          if i.field_type=='file'
+            $scope.files.push i.field
+            if($scope.fields[i.field].value!='')
+              $timeout(->
+                $scope.setImage(i.field,$scope.fields[i.field].value)
+              ,0)
     (error)->
       $scope.errorMessage = error.data
       $timeout(->
@@ -66,7 +78,9 @@ AccessoryEditCtrl = ($scope, $routeParams,AccessoryEdit,AccessoryBreadcrumbs, $t
       )
 
   $scope.save = ->
-    data = dataSave.get()
+    data = {}
+    for i of $scope.fields
+      data[$scope.fields[i].field] = $scope.fields[i].value
     data = $.toJSON(data)
     AccessoryEdit.save(
       id:$routeParams.id
@@ -97,9 +111,52 @@ AccessoryEditCtrl = ($scope, $routeParams,AccessoryEdit,AccessoryBreadcrumbs, $t
       ,10000
       )
 
+  window.setInterval(->
+    for id in $scope.files
+      if $('#'+id+'_input').val()!=''
+        $('#'+id+'_form').submit()
+        $scope.files = []
 
+        interval = window.setInterval(->
+          answer = $('#'+id+'_frame').contents().find('body').html()
+          if(answer)
+            window.clearInterval interval
+            answer = JSON.parse answer
+            if answer.ok==0
+              alert 'Ошибка: '+answer.message
+            if answer.ok ==1
+              $scope.setImage(id, answer.message)
+        ,200
+        )
+  ,1000
+  )
 
+  $scope.clear = (id)->
+    $scope.fields[id].value = '';
+    $('#'+id+'_input').val ''
+    $('#'+id+'_form').show()
+    $('#'+id+'_setimage').html('')
 
+  $scope.setImage = (id, imgsrc)->
+    img = $('<img/>',
+      src:'/images/upload/accessory/tmp/'+imgsrc
+
+    ).css('margin','0 0 10px')
+
+    a = $('<a></a>',
+      'href':'javascript:void(0)'
+      'ng-click':'clear("'+id+'")'
+    ).html 'Удалить'
+    div  = angular.element img.wrap('<div></div>').parent()
+    a  = angular.element a
+
+    $compile(div)($scope)
+    $compile(a)($scope)
+    $('#'+id+'_setimage').append(div).append a
+
+    $('#'+id+'_form').hide()
+    $scope.fields[id].value = imgsrc;
+    $('#'+id+'_input').val('')
 
 # контроллер для списка элементов
 AccessoryListCtrl = ($scope,$http,$routeParams,AccessoryList,AccessoryHierarchy,AccessoryBreadcrumbs,AccessoryDelete,$window,$timeout,$cookieStore)->

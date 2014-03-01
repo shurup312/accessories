@@ -19,12 +19,19 @@ angular.module("accessoryAll", ['AccessoryDataFilter','AccessoryDataService','ng
   ).otherwise
     redirectTo: "/accessory"
 ]).
-  directive('visualElement',->
-    link: (scope, element, attr)->
-      switch scope.param.field_type
-        when "readonly" then element.html elements.readonly scope.param
-        when "small-text" then element.html elements.input scope.param
-        when "text" then element.html elements.textarea scope.param
+directive('visualElement',($compile)->
+  link:(scope, element, attr)->
+    template = ''
+    switch scope.param.field_type
+      when "readonly" then template = element.html elements.readonly scope.param
+      when "small-text" then template = elements.input scope.param
+      when "text" then template = elements.textarea scope.param
+      when "file" then template = elements.file scope.param
+
+    if scope.param.field_type!='readonly'
+      el = angular.element template
+      $compile(el)(scope)
+      element.append(el);
 
 ).directive('listLink',->
   link:  (scope,element, attr)->

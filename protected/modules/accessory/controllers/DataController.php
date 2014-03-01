@@ -7,13 +7,15 @@
  */
 
 /**
- * TODO: не работает создаение записи для модуля
+ * TODO: надо сделать удаление картинок, которые не были сохранены, но были подгружены в запись. так же надо сделаьт
+ * удаление картинок если из записи они были удалены.
  */
 class DataController extends Controller {
 
 	public $layout = '//layouts/admin';
 	public $debug = false;
 	public $model_name = 'Accessory';
+	private $img_folder = '/images/upload/accessory/';
 
 	public function actionList () {
 		if ($this->isAjaxRequest()) {
@@ -308,23 +310,71 @@ class DataController extends Controller {
 		echo json_encode($data);
 	}
 
-	public function actionEve () {
-		$key       = '2981663';
-		$str       = 'DQMRW8Mz15cdc68npw1aWVlNpST1tzlKahpKGxbihfn6X2txgf9y9wFwYlZdYKQj';
-		$url       = "https://api.eveonline.com/account/characters.xml.aspx?keyID=$key&vCode=$str";
-		$c         = file_get_contents($url);
-		$xml       = simplexml_load_string($c);
-		$character = "https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=$key&vCode=$str&characterID=".$xml->result->rowset->row['characterID'];
-		$c         = file_get_contents($character);
-		$xml2      = simplexml_load_string($c);
-		$trade     = "https://api.eveonline.com/char/MarketOrders.xml.aspx?keyID=$key&vCode=$str&characterID=".$xml->result->rowset->row['characterID'];
-		$c         = file_get_contents($trade);
-		$xml3      = simplexml_load_string($c);
-		echo "<pre>";
-		print_r($xml3);
-		echo "</pre>";
-		die();
-		die();
-		die();
+	public function actionUpload(){
+		if ($this->isAjaxRequest()) {
+			$result = array();
+			try {
+				if(empty($_FILES)){
+					throw new Exception('Не удалось получить изображение.');
+				}
+				foreach($_FILES as $key=>$img) {
+					$ext = pathinfo($img['name']);
+					$str = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.$this->img_folder;
+					$path = $str.DIRECTORY_SEPARATOR.$key.DIRECTORY_SEPARATOR.'original'.DIRECTORY_SEPARATOR;
+					$this->checkFolder($path);
+					$filename = time().'('.$ext['filename'].').'.$ext['extension'];
+					$result  = array(
+						'ok'=>1,
+						'param'=>$key,
+						'message'=>$filename
+					);
+					$destination = $path.$filename.'.tmp';
+					if(!move_uploaded_file($img['tmp_name'], $destination)){
+						throw new Exception('Не удалось загрузить файл.');
+					}
+					$this->resizeImage($destination, $str, $filename);
+				}
+			} catch(Exception $e) {
+				$result['ok']  = 0;
+				$result['message'] = $e->getMessage();
+			}
+			$this->returnOk($result);
+		}
+	}
+
+	/**
+	 * @param $path
+	 * @throws Exception
+	 */
+	private function checkFolder ($path) {
+		if (!file_exists($path)) {
+			mkdir($path,0777,true);
+
+		}
+		if (!file_exists($path)) {
+			throw new Exception('Не удалось создать папку.');
+		}
+	}
+
+	/**
+	 * @param $destination
+	 * @param $str
+	 * @param $filename
+	 */
+	private function resizeImage ($destination, $str, $filename) {
+		$f        = $destination;
+		$src      = imagecreatefromjpeg($f);
+		$w_src    = imagesx($src);
+		$h_src    = imagesy($src);
+		$h        = 128; // пропорциональная шириной 128
+		$ratio    = $h_src/$h;
+		$w_dest   = round($w_src/$ratio);
+		$h_dest   = round($h_src/$ratio);
+		$dest     = imagecreatetruecolor($w_dest, $h_dest);
+		$str1 = $str.DIRECTORY_SEPARATOR.'tmp';
+		$this->checkFolder($str1);
+		$img_mini = $str1.DIRECTORY_SEPARATOR.$filename;
+		imagecopyresized($dest, $src, 0, 0, 0, 0, $w_dest, $h_dest, $w_src, $h_src);
+		imageJpeg($dest, $img_mini);
 	}
 }

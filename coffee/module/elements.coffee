@@ -29,6 +29,8 @@ elements =
       value:data.value
       id:data.field
       class:'dataFields'
+      title:data.field_hint
+      'ng-model':"fields."+data.field+'.value'
     )
     # получаем outerHTML
     html.clone().wrap('<p>').parent().html()
@@ -36,15 +38,73 @@ elements =
     html = $('<textarea/>',
       id:data.field
       class:'dataFields'
+      title:data.field_hint
+      'ng-model':"fields."+data.field+'.value'
     ).html data.value
-    console.log data
     # получаем outerHTML
-    html.clone().wrap('<p>').parent().html()
+    html
 
-dataSave =
-  get : ->
-    val = {}
-    $('.dataFields').each(->
-      val[this.id] = this.value
+  checkbox:(data)->
+    html = $('<input/>',
+      type:'checkbox'
+      id:data.field
+      class:'dataFields'
+      title:data.field_hint
+      'ng-model':"fields."+data.field+'.value'
+      'ng-true-value':1
+      'ng-false-value':0
     )
-    val
+    # получаем outerHTML
+    html
+
+  select:(data)->
+    console.log data
+    html = $('<select/>',
+      id:data.field
+      class:'dataFields'
+      title:data.field_hint
+      'ng-model':"fields."+data.field+'.value'
+    )
+    for i of data.options
+      option = $('<option></option>',
+        value:i
+      ).html data.options[i]
+      html.append option
+    # получаем outerHTML
+    html
+  file:(data)->
+    input_img = $("<input/>",
+      type:'file'
+      id:data.field+'_input'
+      name:data.field
+      class:'dataFields'
+      title:data.field_hint
+    )
+    div = $("<div/>",
+      id:data.field+'_setimage'
+    )
+    form = $('<form></form>',
+      id:data.field+'_form'
+      method:'post'
+      action:'/module/data/upload'
+      enctype:'multipart/form-data'
+      target:data.field+'_frame'
+    ).append input_img
+
+    frame = $('<iframe></iframe>',
+      src:''
+      name:data.field+'_frame'
+      id:data.field+'_frame'
+      width:500
+      height:100
+    ).css('display','none')
+
+    div = $('<div></div>').html(div).html()
+    frame = $('<div></div>').html(frame).html()
+    form = $('<div></div>').html(form).html()
+
+    # получаем outerHTML
+    div+form+frame
+
+
+

@@ -21,16 +21,28 @@
         redirectTo: "/accessory"
       });
     }
-  ]).directive('visualElement', function() {
+  ]).directive('visualElement', function($compile) {
     return {
       link: function(scope, element, attr) {
+        var el, template;
+        template = '';
         switch (scope.param.field_type) {
           case "readonly":
-            return element.html(elements.readonly(scope.param));
+            template = element.html(elements.readonly(scope.param));
+            break;
           case "small-text":
-            return element.html(elements.input(scope.param));
+            template = elements.input(scope.param);
+            break;
           case "text":
-            return element.html(elements.textarea(scope.param));
+            template = elements.textarea(scope.param);
+            break;
+          case "file":
+            template = elements.file(scope.param);
+        }
+        if (scope.param.field_type !== 'readonly') {
+          el = angular.element(template);
+          $compile(el)(scope);
+          return element.append(el);
         }
       }
     };

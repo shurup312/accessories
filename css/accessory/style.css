@@ -112,6 +112,9 @@ html, body {
 .form-group *{
     width: 50%;
 }
+.form-group img{
+    width: 200px !important;
+}
 
 /* элементы */
 button {

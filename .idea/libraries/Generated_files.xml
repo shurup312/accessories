@@ -2,15 +2,10 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/coffee/module/controller.js" />
-        <item url="file://$PROJECT_DIR$/coffee/accessory/filter.js" />
-        <item url="file://$PROJECT_DIR$/coffee/accessory/service.js" />
-        <item url="file://$PROJECT_DIR$/coffee/module/filter.js" />
-        <item url="file://$PROJECT_DIR$/coffee/module/service.js" />
-        <item url="file://$PROJECT_DIR$/coffee/accessory/app.js" />
-        <item url="file://$PROJECT_DIR$/coffee/accessory/elements.js" />
         <item url="file://$PROJECT_DIR$/coffee/module/elements.js" />
+        <item url="file://$PROJECT_DIR$/coffee/accessory/app.js" />
         <item url="file://$PROJECT_DIR$/coffee/module/app.js" />
+        <item url="file://$PROJECT_DIR$/coffee/accessory/elements.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -19,10 +14,12 @@
       <root url="file://$PROJECT_DIR$/coffee/module/filter.js" />
       <root url="file://$PROJECT_DIR$/coffee/accessory/service.js" />
       <root url="file://$PROJECT_DIR$/coffee/module/service.js" />
+      <root url="file://$PROJECT_DIR$/coffee/accessory/service.js" />
+      <root url="file://$PROJECT_DIR$/coffee/accessory/filter.js" />
       <root url="file://$PROJECT_DIR$/coffee/accessory/app.js" />
-      <root url="file://$PROJECT_DIR$/coffee/accessory/elements.js" />
       <root url="file://$PROJECT_DIR$/coffee/module/elements.js" />
       <root url="file://$PROJECT_DIR$/coffee/module/app.js" />
+      <root url="file://$PROJECT_DIR$/coffee/accessory/elements.js" />
     </CLASSES>
     <SOURCES />
   </library>

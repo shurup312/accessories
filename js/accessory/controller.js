@@ -47,11 +47,41 @@ AccessoryNewCtrl = function($scope, $routeParams, AccessoryAdd, AccessoryBreadcr
   };
 };
 
-AccessoryEditCtrl = function($scope, $routeParams, AccessoryEdit, AccessoryBreadcrumbs, $timeout) {
+AccessoryEditCtrl = function($scope, $routeParams, AccessoryEdit, AccessoryBreadcrumbs, $timeout, $compile) {
+  $scope.fields = {};
+  $scope.files = [];
   AccessoryEdit.get({
     id: $routeParams.id
   }, function(ok) {
-    return $scope.data = ok;
+    var i, tab, _i, _len, _results;
+    $scope.data = ok;
+    _results = [];
+    for (_i = 0, _len = ok.length; _i < _len; _i++) {
+      tab = ok[_i];
+      _results.push((function() {
+        var _j, _len1, _ref, _results1;
+        _ref = tab.params;
+        _results1 = [];
+        for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+          i = _ref[_j];
+          $scope.fields[i.field] = i;
+          if (i.field_type === 'file') {
+            $scope.files.push(i.field);
+            if ($scope.fields[i.field].value !== '') {
+              _results1.push($timeout(function() {
+                return $scope.setImage(i.field, $scope.fields[i.field].value);
+              }, 0));
+            } else {
+              _results1.push(void 0);
+            }
+          } else {
+            _results1.push(void 0);
+          }
+        }
+        return _results1;
+      })());
+    }
+    return _results;
   }, function(error) {
     $scope.errorMessage = error.data;
     return $timeout(function() {
@@ -59,8 +89,11 @@ AccessoryEditCtrl = function($scope, $routeParams, AccessoryEdit, AccessoryBread
     }, 10000);
   });
   $scope.save = function() {
-    var data;
-    data = dataSave.get();
+    var data, i;
+    data = {};
+    for (i in $scope.fields) {
+      data[$scope.fields[i].field] = $scope.fields[i].value;
+    }
     data = $.toJSON(data);
     return AccessoryEdit.save({
       id: $routeParams.id,
@@ -77,7 +110,7 @@ AccessoryEditCtrl = function($scope, $routeParams, AccessoryEdit, AccessoryBread
       }, 10000);
     });
   };
-  return AccessoryBreadcrumbs.get({
+  AccessoryBreadcrumbs.get({
     id: $routeParams.id
   }, function(ok) {
     $scope.breadcrumbs = ok;
@@ -88,6 +121,59 @@ AccessoryEditCtrl = function($scope, $routeParams, AccessoryEdit, AccessoryBread
       return $scope.errorMessage = '';
     }, 10000);
   });
+  window.setInterval(function() {
+    var id, interval, _i, _len, _ref, _results;
+    _ref = $scope.files;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      id = _ref[_i];
+      if ($('#' + id + '_input').val() !== '') {
+        $('#' + id + '_form').submit();
+        $scope.files = [];
+        _results.push(interval = window.setInterval(function() {
+          var answer;
+          answer = $('#' + id + '_frame').contents().find('body').html();
+          if (answer) {
+            window.clearInterval(interval);
+            answer = JSON.parse(answer);
+            if (answer.ok === 0) {
+              alert('Ошибка: ' + answer.message);
+            }
+            if (answer.ok === 1) {
+              return $scope.setImage(id, answer.message);
+            }
+          }
+        }, 200));
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  }, 1000);
+  $scope.clear = function(id) {
+    $scope.fields[id].value = '';
+    $('#' + id + '_input').val('');
+    $('#' + id + '_form').show();
+    return $('#' + id + '_setimage').html('');
+  };
+  return $scope.setImage = function(id, imgsrc) {
+    var a, div, img;
+    img = $('<img/>', {
+      src: '/images/upload/accessory/tmp/' + imgsrc
+    }).css('margin', '0 0 10px');
+    a = $('<a></a>', {
+      'href': 'javascript:void(0)',
+      'ng-click': 'clear("' + id + '")'
+    }).html('Удалить');
+    div = angular.element(img.wrap('<div></div>').parent());
+    a = angular.element(a);
+    $compile(div)($scope);
+    $compile(a)($scope);
+    $('#' + id + '_setimage').append(div).append(a);
+    $('#' + id + '_form').hide();
+    $scope.fields[id].value = imgsrc;
+    return $('#' + id + '_input').val('');
+  };
 };
 
 AccessoryListCtrl = function($scope, $http, $routeParams, AccessoryList, AccessoryHierarchy, AccessoryBreadcrumbs, AccessoryDelete, $window, $timeout, $cookieStore) {

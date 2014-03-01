@@ -19,13 +19,21 @@ angular.module("moduleAll", ['dataFilter','ModuleDataService','ngCookies']).conf
   ).otherwise
     redirectTo: "/module"
 ]).
-  directive('visualElement',->
-    link: (scope, element, attr)->
+  directive('visualElement',($compile)->
+    link:(scope, element, attr)->
+      template = ''
       switch scope.param.field_type
-        when "readonly" then element.html elements.readonly scope.param
-        when "small-text" then element.html elements.input scope.param
-        when "text" then element.html elements.textarea scope.param
+        when "readonly" then template = element.html elements.readonly scope.param
+        when "small-text" then template = elements.input scope.param
+        when "text" then template = elements.textarea scope.param
+        when "file" then template = elements.file scope.param
+        when "checkbox" then template = elements.checkbox scope.param
+        when "select" then template = elements.select scope.param
 
+      if scope.param.field_type!='readonly'
+        el = angular.element template
+        $compile(el)(scope)
+        element.append(el);
 ).directive('listLink',->
   link:  (scope,element, attr)->
     m = scope.element

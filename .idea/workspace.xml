@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/coffee/module/controller.coffee" line="139" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php" line="228" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="032aa6f9-b145-45f8-853b-b15c9245d924" name="Default" comment="" />
     <ignored path="accessories.iws" />
@@ -23,74 +27,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="detail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/detail.php">
+      <file leaf-file-name="DataController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="20" selection-start="20" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="384" selection-end="384" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/DataController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="33" selection-start="3799" selection-end="3799" vertical-scroll-proportion="0.0" vertical-offset="2329" max-vertical-offset="5695">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Accessory.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/accessory/models/Accessory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="47" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="5780">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="74" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0" vertical-offset="952" max-vertical-offset="1581">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="62" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1513">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="391">
-              <folding />
+            <state line="6" column="3" selection-start="169" selection-end="169" vertical-scroll-proportion="0.10725552" vertical-offset="0" max-vertical-offset="9435">
+              <folding>
+                <element signature="e#6#169#0" expanded="true" />
+                <element signature="e#415#578#0" expanded="true" />
+                <element signature="e#1011#1252#0" expanded="true" />
+                <element signature="e#1396#1435#0" expanded="true" />
+                <element signature="e#2158#2305#0" expanded="true" />
+                <element signature="e#4451#4658#0" expanded="true" />
+                <element signature="e#5228#5370#0" expanded="true" />
+                <element signature="e#5779#6008#0" expanded="true" />
+                <element signature="e#6161#6226#0" expanded="true" />
+                <element signature="e#6486#6752#0" expanded="true" />
+                <element signature="e#7700#7868#0" expanded="true" />
+                <element signature="e#8504#8555#0" expanded="true" />
+                <element signature="e#9791#9926#0" expanded="true" />
+                <element signature="e#10032#10261#0" expanded="true" />
+                <element signature="e#10622#10901#0" expanded="true" />
+                <element signature="e#11027#11155#0" expanded="true" />
+                <element signature="e#11697#11883#0" expanded="true" />
+                <element signature="e#12008#12160#0" expanded="true" />
+                <element signature="e#12222#12383#0" expanded="true" />
+                <element signature="e#12453#12679#0" expanded="true" />
+                <element signature="e#13776#13971#0" expanded="true" />
+                <element signature="e#14168#14484#0" expanded="true" />
+                <element signature="e#15016#15124#0" expanded="true" />
+                <element signature="e#15148#15274#0" expanded="true" />
+                <element signature="e#15676#15781#0" expanded="true" />
+                <element signature="e#15808#15910#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,35 +82,52 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/js/module/elements.js" />
-        <option value="$PROJECT_DIR$/coffee/module/elements.coffee" />
-        <option value="$PROJECT_DIR$/protected/modules/module/models/Module.php" />
-        <option value="$PROJECT_DIR$/protected/modules/module/controllers/DataController.php" />
         <option value="$PROJECT_DIR$/js/angular-1.0.6/docs/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/js/angular-1.0.6/docs/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/css/module/style.css" />
         <option value="$PROJECT_DIR$/protected/modules/module/views/template/list.php" />
-        <option value="$PROJECT_DIR$/js/module/controller.js" />
-        <option value="$PROJECT_DIR$/coffee/module/controller.coffee" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/AccessoryModule.php" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/views/index/index.php" />
-        <option value="$PROJECT_DIR$/js/accessory/app.js" />
         <option value="$PROJECT_DIR$/coffee/accessory/filter.coffee" />
         <option value="$PROJECT_DIR$/coffee/accessory/service.coffee" />
-        <option value="$PROJECT_DIR$/coffee/accessory/app.coffee" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/views/template/list.php" />
-        <option value="$PROJECT_DIR$/coffee/accessory/controller.coffee" />
-        <option value="$PROJECT_DIR$/coffee/accessory/elements.coffee" />
         <option value="$PROJECT_DIR$/protected/modules/module/views/template/new.php" />
-        <option value="$PROJECT_DIR$/protected/modules/accessory/views/template/edit.php" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/views/template/new.php" />
-        <option value="$PROJECT_DIR$/protected/modules/module/views/template/edit.php" />
         <option value="$PROJECT_DIR$/protected/modules/module/views/template/detail.php" />
-        <option value="$PROJECT_DIR$/protected/modules/accessory/controllers/DataController.php" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/models/Accessory.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/admin.php" />
         <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/modules/accessory/views/template/detail.php" />
+        <option value="$PROJECT_DIR$/protected/modules/accessory/views/template/edit.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/log.txt" />
+        <option value="$PROJECT_DIR$/xml.php" />
+        <option value="$PROJECT_DIR$/parse.php" />
+        <option value="$PROJECT_DIR$/click.php" />
+        <option value="$PROJECT_DIR$/js/accessory/controller.js" />
+        <option value="$PROJECT_DIR$/form.html" />
+        <option value="$PROJECT_DIR$/gallery.php" />
+        <option value="$PROJECT_DIR$/gallery.json" />
+        <option value="$PROJECT_DIR$/../wedding/public_html/form.html" />
+        <option value="$PROJECT_DIR$/../wedding/public_html/gallery.php" />
+        <option value="$PROJECT_DIR$/../wedding/public_html/gallery.json" />
+        <option value="$PROJECT_DIR$/js/accessory/app.js" />
+        <option value="$PROJECT_DIR$/coffee/module/app.js" />
+        <option value="$PROJECT_DIR$/js/module/app.js" />
+        <option value="$PROJECT_DIR$/css/accessory/style.css" />
+        <option value="$PROJECT_DIR$/protected/modules/module/views/template/edit.php" />
+        <option value="$PROJECT_DIR$/js/accessory/elements.js" />
+        <option value="$PROJECT_DIR$/coffee/accessory/elements.coffee" />
+        <option value="$PROJECT_DIR$/coffee/accessory/controller.coffee" />
+        <option value="$PROJECT_DIR$/protected/modules/accessory/controllers/DataController.php" />
+        <option value="$PROJECT_DIR$/coffee/accessory/app.coffee" />
+        <option value="$PROJECT_DIR$/js/module/controller.js" />
+        <option value="$PROJECT_DIR$/coffee/module/controller.coffee" />
+        <option value="$PROJECT_DIR$/coffee/module/app.coffee" />
+        <option value="$PROJECT_DIR$/protected/modules/module/models/Module.php" />
+        <option value="$PROJECT_DIR$/coffee/module/elements.coffee" />
+        <option value="$PROJECT_DIR$/css/module/style.css" />
+        <option value="$PROJECT_DIR$/protected/modules/module/controllers/DataController.php" />
       </list>
     </option>
   </component>
@@ -164,10 +149,16 @@
           <State>
             <id>JavaScript</id>
           </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Type compatibilityPHP</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSUnresolvedVariable</id>
+            <id>PhpParamsInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -199,7 +190,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,47 +236,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,29 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="accessory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessory" />
+              <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -360,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="accessory" />
+              <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -386,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="accessory" />
+              <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -408,7 +340,137 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accessory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,13 +512,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../wedding" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -467,6 +530,11 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntriesCoffeeScript" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -533,7 +601,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8743769" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.8743769" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901296" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -543,12 +611,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -568,21 +636,50 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/edit.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="866" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="612" />
+        <state line="72" column="0" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="7293">
+          <folding>
+            <element signature="e#6#169#0" expanded="true" />
+            <element signature="e#415#578#0" expanded="true" />
+            <element signature="e#1011#1252#0" expanded="true" />
+            <element signature="e#1396#1435#0" expanded="true" />
+            <element signature="e#2158#2305#0" expanded="true" />
+            <element signature="e#4451#4658#0" expanded="true" />
+            <element signature="e#5228#5370#0" expanded="true" />
+            <element signature="e#5779#6008#0" expanded="true" />
+            <element signature="e#6161#6226#0" expanded="true" />
+            <element signature="e#6486#6752#0" expanded="true" />
+            <element signature="e#7700#7868#0" expanded="true" />
+            <element signature="e#8504#8555#0" expanded="true" />
+            <element signature="e#9791#9926#0" expanded="true" />
+            <element signature="e#10032#10261#0" expanded="true" />
+            <element signature="e#10622#10901#0" expanded="true" />
+            <element signature="e#11027#11155#0" expanded="true" />
+            <element signature="e#11697#11883#0" expanded="true" />
+            <element signature="e#12008#12160#0" expanded="true" />
+            <element signature="e#12222#12383#0" expanded="true" />
+            <element signature="e#12453#12679#0" expanded="true" />
+            <element signature="e#13776#13971#0" expanded="true" />
+            <element signature="e#14168#14484#0" expanded="true" />
+            <element signature="e#15016#15124#0" expanded="true" />
+            <element signature="e#15148#15274#0" expanded="true" />
+            <element signature="e#15676#15781#0" expanded="true" />
+            <element signature="e#15808#15910#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/new.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/models/Module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="10" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="595" />
+        <state line="125" column="173" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="5933">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="5" column="31" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
@@ -592,63 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/module/controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="22" selection-start="9519" selection-end="9519" vertical-scroll-proportion="0.0" vertical-offset="5831" max-vertical-offset="5933" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="17" selection-start="3371" selection-end="3371" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1411" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/module/elements.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="7" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="935" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="0" selection-start="3740" selection-end="3740" vertical-scroll-proportion="0.0" vertical-offset="3545" max-vertical-offset="4522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="866" selection-end="894" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="10" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="28" selection-start="4550" selection-end="4550" vertical-scroll-proportion="0.0" vertical-offset="2635" max-vertical-offset="5185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663">
-          <folding />
-        </state>
+        <state line="13" column="33" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/angular-1.0.6/docs/css/bootstrap.css">
@@ -661,29 +702,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="964" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/models/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="197" selection-start="4850" selection-end="4850" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="5729" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular-1.0.6/docs/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="1" selection-start="1883" selection-end="1883" vertical-scroll-proportion="0.56224066" vertical-offset="19" max-vertical-offset="14671" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="28" selection-start="4550" selection-end="4550" vertical-scroll-proportion="0.0" vertical-offset="2292" max-vertical-offset="5185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/module/elements.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="7" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="0" selection-start="3740" selection-end="3740" vertical-scroll-proportion="0.0" vertical-offset="3545" max-vertical-offset="4522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/list.php">
@@ -691,24 +712,9 @@
         <state line="32" column="31" selection-start="1153" selection-end="1153" vertical-scroll-proportion="-0.0" vertical-offset="544" max-vertical-offset="1513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="4" selection-start="3150" selection-end="3150" vertical-scroll-proportion="0.45850623" vertical-offset="136" max-vertical-offset="1428" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="498" selection-end="498" vertical-scroll-proportion="0.29964748" vertical-offset="0" max-vertical-offset="851" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/module/controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="22" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/accessory/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="964" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/AccessoryModule.php">
@@ -716,19 +722,9 @@
         <state line="11" column="29" selection-start="339" selection-end="339" vertical-scroll-proportion="0.19663513" vertical-offset="0" max-vertical-offset="951" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/module/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.12344398" vertical-offset="0" max-vertical-offset="964" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/index/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="25" selection-start="472" selection-end="484" vertical-scroll-proportion="0.1787592" vertical-offset="0" max-vertical-offset="951" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/accessory/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="56" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/console.php">
@@ -736,39 +732,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/accessory/service.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="8" selection-end="14" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1360" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/accessory/app.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="97" selection-start="158" selection-end="164" vertical-scroll-proportion="0.017400205" vertical-offset="0" max-vertical-offset="977" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="33" selection-start="419" selection-end="419" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="390" selection-end="390" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coffee/accessory/filter.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="20" selection-start="162" selection-end="162" vertical-scroll-proportion="0.06960082" vertical-offset="0" max-vertical-offset="977" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="66" selection-start="389" selection-end="389" vertical-scroll-proportion="0.14300737" vertical-offset="0" max-vertical-offset="951" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/accessory/controller.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="422" selection-end="422" vertical-scroll-proportion="0.34398296" vertical-offset="0" max-vertical-offset="4080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/new.php">
@@ -781,69 +752,212 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coffee/accessory/elements.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="27" selection-start="965" selection-end="965" vertical-scroll-proportion="0.678608" vertical-offset="0" max-vertical-offset="977" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yii/framework/vendors/TextHighlighter/Text/Highlighter/PHP.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="18020" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="62" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="74" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1581">
-          <folding />
-        </state>
+        <state line="19" column="62" selection-start="787" selection-end="787" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/models/Accessory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="47" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="5780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/DataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="33" selection-start="3799" selection-end="3799" vertical-scroll-proportion="0.0" vertical-offset="2329" max-vertical-offset="5695">
-          <folding />
-        </state>
+        <state line="94" column="47" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="5780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/detail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="384" selection-end="384" vertical-scroll-proportion="0.2681388" vertical-offset="0" max-vertical-offset="951">
+        <state line="20" column="21" selection-start="550" selection-end="550" vertical-scroll-proportion="0.3575184" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="20" selection-start="20" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="74" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.33859095" vertical-offset="630" max-vertical-offset="1581" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/module/service.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/accessory/service.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.03480041" vertical-offset="0" max-vertical-offset="977" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.017875921" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="814" column="9" selection-start="24267" selection-end="24267" vertical-scroll-proportion="0.40168244" vertical-offset="1845" max-vertical-offset="2822" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="38" selection-start="0" selection-end="1248" vertical-scroll-proportion="0.39327025" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accessory/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="21" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.6348548" vertical-offset="561" max-vertical-offset="1615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accessory/service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="964" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1701" column="39" selection-start="27254" selection-end="27294" vertical-scroll-proportion="0.5414534" vertical-offset="11490" max-vertical-offset="32793" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../new/gallery.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accessory/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="765" selection-end="765" vertical-scroll-proportion="0.27840328" vertical-offset="0" max-vertical-offset="1190" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="3" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.2691914" vertical-offset="349" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module/elements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/accessory/elements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="977" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.19663513" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/views/template/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="6" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.5362776" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/views/template/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.5720295" vertical-offset="0" max-vertical-offset="951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/accessory/elements.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="0.03480041" vertical-offset="0" max-vertical-offset="1462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/accessory/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="988" selection-end="988" vertical-scroll-proportion="0.12344398" vertical-offset="0" max-vertical-offset="964" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/accessory/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="1696" selection-end="1743" vertical-scroll-proportion="0.46180964" vertical-offset="1545" max-vertical-offset="4573" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/accessory/controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="0" selection-start="3189" selection-end="3875" vertical-scroll-proportion="0.38544154" vertical-offset="1377" max-vertical-offset="4420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="24" selection-start="7061" selection-end="7061" vertical-scroll-proportion="0.6551313" vertical-offset="2545" max-vertical-offset="3383" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/accessory/controllers/DataController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="49" selection-start="625" selection-end="658" vertical-scroll-proportion="0.20689656" vertical-offset="155" max-vertical-offset="5814" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/models/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="173" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="5933">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.3828045" vertical-offset="0" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/module/elements.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="24" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.88741046" vertical-offset="340" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/module/controller.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="0" selection-start="3427" selection-end="3427" vertical-scroll-proportion="0.4370522" vertical-offset="1800" max-vertical-offset="7905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coffee/module/app.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="53" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.52200615" vertical-offset="0" max-vertical-offset="977">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/module/controllers/DataController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="169" selection-end="169" vertical-scroll-proportion="0.10725552" vertical-offset="0" max-vertical-offset="9435">
+          <folding>
+            <element signature="e#6#169#0" expanded="true" />
+            <element signature="e#415#578#0" expanded="true" />
+            <element signature="e#1011#1252#0" expanded="true" />
+            <element signature="e#1396#1435#0" expanded="true" />
+            <element signature="e#2158#2305#0" expanded="true" />
+            <element signature="e#4451#4658#0" expanded="true" />
+            <element signature="e#5228#5370#0" expanded="true" />
+            <element signature="e#5779#6008#0" expanded="true" />
+            <element signature="e#6161#6226#0" expanded="true" />
+            <element signature="e#6486#6752#0" expanded="true" />
+            <element signature="e#7700#7868#0" expanded="true" />
+            <element signature="e#8504#8555#0" expanded="true" />
+            <element signature="e#9791#9926#0" expanded="true" />
+            <element signature="e#10032#10261#0" expanded="true" />
+            <element signature="e#10622#10901#0" expanded="true" />
+            <element signature="e#11027#11155#0" expanded="true" />
+            <element signature="e#11697#11883#0" expanded="true" />
+            <element signature="e#12008#12160#0" expanded="true" />
+            <element signature="e#12222#12383#0" expanded="true" />
+            <element signature="e#12453#12679#0" expanded="true" />
+            <element signature="e#13776#13971#0" expanded="true" />
+            <element signature="e#14168#14484#0" expanded="true" />
+            <element signature="e#15016#15124#0" expanded="true" />
+            <element signature="e#15148#15274#0" expanded="true" />
+            <element signature="e#15676#15781#0" expanded="true" />
+            <element signature="e#15808#15910#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

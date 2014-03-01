@@ -4,12 +4,25 @@ regular =
   \s+ #прямо посрдени регулярки
 ///
 
-ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout)->
+ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile)->
+  $scope.fields  = {}
+  $scope.files = []
+
   ModuleAdd.get
     id:$routeParams.pareId
     type_id:$routeParams.typeId
     (ok)->
       $scope.data = ok
+      for tab in ok
+        for i in tab.params
+          $scope.fields[i.field] = i
+          console.log $scope.fields
+          if i.field_type=='file'
+            $scope.files.push i.field
+            if(typeof $scope.fields[i.field].value!='undefined' && $scope.fields[i.field].value!='')
+              $timeout(->
+                $scope.setImage(i.field,$scope.fields[i.field].value)
+              ,0)
     (error)->
       $scope.errorMessage = error.data
       $timeout(->
@@ -17,23 +30,23 @@ ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout)->
       ,10000
       )
 
-    ModuleBreadcrumbs.get
-      id:$routeParams.pareId
-      (ok)->
-        $scope.breadcrumbs = ok
-        $scope.breadcrumbs[ok.length] = {'name':'Создать новый'}
-      (error)->
-        $scope.errorMessage = error.data
-        $timeout(->
-          $scope.errorMessage = ''
-        ,10000
-        )
-
-
+  ModuleBreadcrumbs.get
+    id:$routeParams.pareId
+    (ok)->
+      $scope.breadcrumbs = ok
+      $scope.breadcrumbs[ok.length] = {'name':'Создать новый'}
+    (error)->
+      $scope.errorMessage = error.data
+      $timeout(->
+        $scope.errorMessage = ''
+      ,10000
+      )
 
   $scope.create = ->
-    data = dataSave.get()
-    data = $.toJSON data
+    data = {}
+    for i of $scope.fields
+      data[$scope.fields[i].field] = $scope.fields[i].value
+    data = $.toJSON(data)
     ModuleAdd.save(
       data:data
       type_id:$routeParams.typeId
@@ -53,11 +66,70 @@ ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout)->
         )
     )
 
-ModuleEditCtrl = ($scope, $routeParams,ModuleEdit,ModuleBreadcrumbs, $timeout)->
+  window.setInterval(->
+    for id in $scope.files
+      if $('#'+id+'_input').val()!=''
+        $('#'+id+'_form').submit()
+        $scope.files = []
+
+        interval = window.setInterval(->
+          answer = $('#'+id+'_frame').contents().find('body').html()
+          if(answer)
+            window.clearInterval interval
+            answer = JSON.parse answer
+            if answer.ok==0
+              alert 'Ошибка: '+answer.message
+            if answer.ok ==1
+              $scope.setImage(id, answer.message)
+        ,200
+        )
+  ,1000
+  )
+
+  $scope.clear = (id)->
+    $scope.fields[id].value = '';
+    $('#'+id+'_input').val ''
+    $('#'+id+'_form').show()
+    $('#'+id+'_setimage').html('')
+
+  $scope.setImage = (id, imgsrc)->
+    img = $('<img/>',
+      src:'/images/upload/module/tmp/'+imgsrc
+
+    ).css('margin','0 0 10px')
+
+    a = $('<a></a>',
+      'href':'javascript:void(0)'
+      'ng-click':'clear("'+id+'")'
+    ).html 'Удалить'
+    div  = angular.element img.wrap('<div></div>').parent()
+    a  = angular.element a
+
+    $compile(div)($scope)
+    $compile(a)($scope)
+    $('#'+id+'_setimage').append(div).append a
+
+    $('#'+id+'_form').hide()
+    $scope.fields[id].value = imgsrc;
+    $('#'+id+'_input').val('')
+
+ModuleEditCtrl = ($scope, $routeParams,ModuleEdit,ModuleBreadcrumbs, $timeout,$compile)->
+  $scope.fields  = {}
+  $scope.files = []
+
   ModuleEdit.get
     id:$routeParams.id
     (ok)->
       $scope.data = ok
+      for tab in ok
+        for i in tab.params
+          $scope.fields[i.field] = i
+          if i.field_type=='file'
+            $scope.files.push i.field
+            if($scope.fields[i.field].value!='')
+              $timeout(->
+                $scope.setImage(i.field,$scope.fields[i.field].value)
+              ,0)
     (error)->
       $scope.errorMessage = error.data
       $timeout(->
@@ -66,7 +138,9 @@ ModuleEditCtrl = ($scope, $routeParams,ModuleEdit,ModuleBreadcrumbs, $timeout)->
       )
 
   $scope.save = ->
-    data = dataSave.get()
+    data = {}
+    for i of $scope.fields
+      data[$scope.fields[i].field] = $scope.fields[i].value
     data = $.toJSON(data)
     ModuleEdit.save(
       id:$routeParams.id
@@ -97,9 +171,52 @@ ModuleEditCtrl = ($scope, $routeParams,ModuleEdit,ModuleBreadcrumbs, $timeout)->
       ,10000
       )
 
+  window.setInterval(->
+    for id in $scope.files
+      if $('#'+id+'_input').val()!=''
+        $('#'+id+'_form').submit()
+        $scope.files = []
 
+        interval = window.setInterval(->
+          answer = $('#'+id+'_frame').contents().find('body').html()
+          if(answer)
+            window.clearInterval interval
+            answer = JSON.parse answer
+            if answer.ok==0
+              alert 'Ошибка: '+answer.message
+            if answer.ok ==1
+              $scope.setImage(id, answer.message)
+        ,200
+        )
+  ,1000
+  )
 
+  $scope.clear = (id)->
+    $scope.fields[id].value = '';
+    $('#'+id+'_input').val ''
+    $('#'+id+'_form').show()
+    $('#'+id+'_setimage').html('')
 
+  $scope.setImage = (id, imgsrc)->
+    img = $('<img/>',
+      src:'/images/upload/module/tmp/'+imgsrc
+
+    ).css('margin','0 0 10px')
+
+    a = $('<a></a>',
+      'href':'javascript:void(0)'
+      'ng-click':'clear("'+id+'")'
+    ).html 'Удалить'
+    div  = angular.element img.wrap('<div></div>').parent()
+    a  = angular.element a
+
+    $compile(div)($scope)
+    $compile(a)($scope)
+    $('#'+id+'_setimage').append(div).append a
+
+    $('#'+id+'_form').hide()
+    $scope.fields[id].value = imgsrc;
+    $('#'+id+'_input').val('')
 
 # контроллер для списка элементов
 ModuleListCtrl = ($scope,$http,$routeParams,ModuleList,ModuleHierarchy,ModuleBreadcrumbs,ModuleDelete,$window,$timeout,$cookieStore)->

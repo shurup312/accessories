@@ -1,18 +1,50 @@
 /regular=[0-10]$\s+/;
 var ModuleDetailCtrl, ModuleEditCtrl, ModuleListCtrl, ModuleNewCtrl;
 
-ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout) {
+ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile) {
+  $scope.fields = {};
+  $scope.files = [];
   ModuleAdd.get({
     id: $routeParams.pareId,
     type_id: $routeParams.typeId
   }, function(ok) {
-    return $scope.data = ok;
+    var i, tab, _i, _len, _results;
+    $scope.data = ok;
+    _results = [];
+    for (_i = 0, _len = ok.length; _i < _len; _i++) {
+      tab = ok[_i];
+      _results.push((function() {
+        var _j, _len1, _ref, _results1;
+        _ref = tab.params;
+        _results1 = [];
+        for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+          i = _ref[_j];
+          $scope.fields[i.field] = i;
+          console.log($scope.fields);
+          if (i.field_type === 'file') {
+            $scope.files.push(i.field);
+            if (typeof $scope.fields[i.field].value !== 'undefined' && $scope.fields[i.field].value !== '') {
+              _results1.push($timeout(function() {
+                return $scope.setImage(i.field, $scope.fields[i.field].value);
+              }, 0));
+            } else {
+              _results1.push(void 0);
+            }
+          } else {
+            _results1.push(void 0);
+          }
+        }
+        return _results1;
+      })());
+    }
+    return _results;
   }, function(error) {
     $scope.errorMessage = error.data;
     return $timeout(function() {
       return $scope.errorMessage = '';
     }, 10000);
-  }, ModuleBreadcrumbs.get({
+  });
+  ModuleBreadcrumbs.get({
     id: $routeParams.pareId
   }, function(ok) {
     $scope.breadcrumbs = ok;
@@ -24,10 +56,13 @@ ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $ti
     return $timeout(function() {
       return $scope.errorMessage = '';
     }, 10000);
-  }));
-  return $scope.create = function() {
-    var data;
-    data = dataSave.get();
+  });
+  $scope.create = function() {
+    var data, i;
+    data = {};
+    for (i in $scope.fields) {
+      data[$scope.fields[i].field] = $scope.fields[i].value;
+    }
     data = $.toJSON(data);
     return ModuleAdd.save({
       data: data,
@@ -45,13 +80,96 @@ ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $ti
       }, 10000);
     });
   };
+  window.setInterval(function() {
+    var id, interval, _i, _len, _ref, _results;
+    _ref = $scope.files;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      id = _ref[_i];
+      if ($('#' + id + '_input').val() !== '') {
+        $('#' + id + '_form').submit();
+        $scope.files = [];
+        _results.push(interval = window.setInterval(function() {
+          var answer;
+          answer = $('#' + id + '_frame').contents().find('body').html();
+          if (answer) {
+            window.clearInterval(interval);
+            answer = JSON.parse(answer);
+            if (answer.ok === 0) {
+              alert('Ошибка: ' + answer.message);
+            }
+            if (answer.ok === 1) {
+              return $scope.setImage(id, answer.message);
+            }
+          }
+        }, 200));
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  }, 1000);
+  $scope.clear = function(id) {
+    $scope.fields[id].value = '';
+    $('#' + id + '_input').val('');
+    $('#' + id + '_form').show();
+    return $('#' + id + '_setimage').html('');
+  };
+  return $scope.setImage = function(id, imgsrc) {
+    var a, div, img;
+    img = $('<img/>', {
+      src: '/images/upload/module/tmp/' + imgsrc
+    }).css('margin', '0 0 10px');
+    a = $('<a></a>', {
+      'href': 'javascript:void(0)',
+      'ng-click': 'clear("' + id + '")'
+    }).html('Удалить');
+    div = angular.element(img.wrap('<div></div>').parent());
+    a = angular.element(a);
+    $compile(div)($scope);
+    $compile(a)($scope);
+    $('#' + id + '_setimage').append(div).append(a);
+    $('#' + id + '_form').hide();
+    $scope.fields[id].value = imgsrc;
+    return $('#' + id + '_input').val('');
+  };
 };
 
-ModuleEditCtrl = function($scope, $routeParams, ModuleEdit, ModuleBreadcrumbs, $timeout) {
+ModuleEditCtrl = function($scope, $routeParams, ModuleEdit, ModuleBreadcrumbs, $timeout, $compile) {
+  $scope.fields = {};
+  $scope.files = [];
   ModuleEdit.get({
     id: $routeParams.id
   }, function(ok) {
-    return $scope.data = ok;
+    var i, tab, _i, _len, _results;
+    $scope.data = ok;
+    _results = [];
+    for (_i = 0, _len = ok.length; _i < _len; _i++) {
+      tab = ok[_i];
+      _results.push((function() {
+        var _j, _len1, _ref, _results1;
+        _ref = tab.params;
+        _results1 = [];
+        for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+          i = _ref[_j];
+          $scope.fields[i.field] = i;
+          if (i.field_type === 'file') {
+            $scope.files.push(i.field);
+            if ($scope.fields[i.field].value !== '') {
+              _results1.push($timeout(function() {
+                return $scope.setImage(i.field, $scope.fields[i.field].value);
+              }, 0));
+            } else {
+              _results1.push(void 0);
+            }
+          } else {
+            _results1.push(void 0);
+          }
+        }
+        return _results1;
+      })());
+    }
+    return _results;
   }, function(error) {
     $scope.errorMessage = error.data;
     return $timeout(function() {
@@ -59,8 +177,11 @@ ModuleEditCtrl = function($scope, $routeParams, ModuleEdit, ModuleBreadcrumbs, $
     }, 10000);
   });
   $scope.save = function() {
-    var data;
-    data = dataSave.get();
+    var data, i;
+    data = {};
+    for (i in $scope.fields) {
+      data[$scope.fields[i].field] = $scope.fields[i].value;
+    }
     data = $.toJSON(data);
     return ModuleEdit.save({
       id: $routeParams.id,
@@ -77,7 +198,7 @@ ModuleEditCtrl = function($scope, $routeParams, ModuleEdit, ModuleBreadcrumbs, $
       }, 10000);
     });
   };
-  return ModuleBreadcrumbs.get({
+  ModuleBreadcrumbs.get({
     id: $routeParams.id
   }, function(ok) {
     $scope.breadcrumbs = ok;
@@ -88,6 +209,59 @@ ModuleEditCtrl = function($scope, $routeParams, ModuleEdit, ModuleBreadcrumbs, $
       return $scope.errorMessage = '';
     }, 10000);
   });
+  window.setInterval(function() {
+    var id, interval, _i, _len, _ref, _results;
+    _ref = $scope.files;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      id = _ref[_i];
+      if ($('#' + id + '_input').val() !== '') {
+        $('#' + id + '_form').submit();
+        $scope.files = [];
+        _results.push(interval = window.setInterval(function() {
+          var answer;
+          answer = $('#' + id + '_frame').contents().find('body').html();
+          if (answer) {
+            window.clearInterval(interval);
+            answer = JSON.parse(answer);
+            if (answer.ok === 0) {
+              alert('Ошибка: ' + answer.message);
+            }
+            if (answer.ok === 1) {
+              return $scope.setImage(id, answer.message);
+            }
+          }
+        }, 200));
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  }, 1000);
+  $scope.clear = function(id) {
+    $scope.fields[id].value = '';
+    $('#' + id + '_input').val('');
+    $('#' + id + '_form').show();
+    return $('#' + id + '_setimage').html('');
+  };
+  return $scope.setImage = function(id, imgsrc) {
+    var a, div, img;
+    img = $('<img/>', {
+      src: '/images/upload/module/tmp/' + imgsrc
+    }).css('margin', '0 0 10px');
+    a = $('<a></a>', {
+      'href': 'javascript:void(0)',
+      'ng-click': 'clear("' + id + '")'
+    }).html('Удалить');
+    div = angular.element(img.wrap('<div></div>').parent());
+    a = angular.element(a);
+    $compile(div)($scope);
+    $compile(a)($scope);
+    $('#' + id + '_setimage').append(div).append(a);
+    $('#' + id + '_form').hide();
+    $scope.fields[id].value = imgsrc;
+    return $('#' + id + '_input').val('');
+  };
 };
 
 ModuleListCtrl = function($scope, $http, $routeParams, ModuleList, ModuleHierarchy, ModuleBreadcrumbs, ModuleDelete, $window, $timeout, $cookieStore) {
