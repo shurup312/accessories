@@ -3,7 +3,7 @@
  * @author     Приходько Олег <shurup@e-mind.ru>
  * @package    Модуль создания модулей
  * @subpackage Контроллер данных для Ajax запросов
- * @version    Version 0.11
+ * @version    Version 0.11 $Id: module.dataController v 0.11 2014-03-01 12:00:00$
  */
 
 /**
@@ -839,7 +839,7 @@ class observableLog {
 interface Logger {
 
 	/**
-	 * Метод, который реализует действия, которые логгер должен сделать с объектов лога.
+	 * Метод, который реализует действия, которые логгер должен сделать с объектом лога.
 	 *
 	 * @access   public
 	 * @since    0.1
