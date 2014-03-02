@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @author     Приходько Олег <shurup@e-mind.ru>
+ * @package    Модуль создания модулей
+ * @subpackage Модуль управления контроллерами
+ * @version    Version 0.1
+ */
 class ModuleModule extends CWebModule {
 
 	public function init () {
@@ -20,11 +25,19 @@ class ModuleModule extends CWebModule {
 	 * @return bool
 	 */
 	public function beforeControllerAction ($controller, $action) {
-		$rights = 'module.'.$controller->getId().'.'.$action->getId();
+//		$rights = 'module.'.$controller->getId().'.'.$action->getId();
+//		if(true || Rights::check($rights, $user->rights)){
+//			if(RequestUtil::getInstance()->isAjaxRequest()){
+//				$controller->rightsError();
+//
+//			} else {
+//				$controller->rightsError();
+//			}
+//			return false;
+//		}
 
 		if (parent::beforeControllerAction($controller, $action)) {
 
-			$controller->debug = true;
 			// this method is called before any module controller action is performed
 			// you may place customized code here
 			return true;

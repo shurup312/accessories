@@ -4,8 +4,8 @@
 	</div>
 
 	<div class="bg-25 border-all">
-		<div ng-show="errorMessage" class="error">{{errorMessage}}</div>
-		<div ng-show="okMessage" class="ok">{{okMessage}}</div>
+		<div ng-show="errorMessage" class="error padding-10-20">{{errorMessage}}</div>
+		<div ng-show="okMessage" class="ok padding-10-20">{{okMessage}}</div>
 		<div class="padding-10-20">
 			<legend>Редактирование</legend>
 		</div>

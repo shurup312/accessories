@@ -3,7 +3,7 @@
  * @author     Приходько Олег <shurup@e-mind.ru>
  * @package    Модуль создания модулей
  * @subpackage Контроллер данных для Ajax запросов
- * @version    Version 0.11
+ * @version    Version 0.12
  */
 
 /**
@@ -562,6 +562,17 @@ class DataController extends Controller {
 		if (!file_exists($path)) {
 			throw new DataException('Не удалось создать папку.');
 		}
+	}
+
+	/**
+	 * Выдает собщение ошибки, если у пользователя недостаточно прав для доступа к странице.
+	 *
+	 * @access   public
+	 * @since    0.12
+	 * @todo Вынести в отдельный класс
+	 */
+	public function rightsError (){
+		$this->returnError('У Вас недостаточно прав для доступа к этой старнице. Попробуйте авторизоваться под другим пользователем.');
 	}
 
 }

@@ -26,7 +26,6 @@ html, body {
     color: #ffaaaa;
     font-size: 14px;
     clear: both;
-    margin: 10px 20px;
 }
 
 .error:before {
@@ -39,7 +38,6 @@ html, body {
     color: #aaffaa;
     font-size: 14px;
     clear: both;
-    margin: 10px 20px;
 }
 
 .ok:before {

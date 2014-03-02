@@ -7,9 +7,31 @@
  */
 
 class RequestUtil {
+
+	/**
+	 * @var bool $debug Указывает, все ли запросы воспринимать как ajax или нет.
+	 */
+	private $debug=false;
+	/**
+	 * @var object $instance хранит экземпляр класса, созданный через getInstance
+	 */
 	private static $instance;
+	/**
+	 * Конструктор класса, закрыт от внешного использования, так как класс реализует паттерн "Синглтон".
+	 * @access private
+	 * @since  0.1
+	 *
+	 * @return RequestUtil
+	 */
 	private function __construct(){}
 
+	/**
+	 * Конструктор инстанса.
+	 * @access public
+	 * @since  0.1
+	 *
+	 * @return RequestUtil
+	 */
 	public static function getInstance(){
 		if(!self::$instance){
 			self::$instance = new RequestUtil();

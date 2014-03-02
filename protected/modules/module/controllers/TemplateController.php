@@ -4,7 +4,7 @@
  * @author     Приходько Олег <shurup@e-mind.ru>
  * @package    Модуль создания модулей
  * @subpackage Контроллер отдачи дизайнов для конкретных страниц.
- * @version    Version 0.1
+ * @version    Version 0.11
  */
 class TemplateController extends Controller {
 
@@ -22,9 +22,10 @@ class TemplateController extends Controller {
 	 * @since  0.1
 	 */
 	public function actionList () {
-		if ($this->isAjaxRequest()) {
-			$this->renderPartial('list');
+		if (!RequestUtil::getInstance()->isAjaxRequest()) {
+			return false;
 		}
+		$this->renderPartial('list');
 	}
 
 	/**
@@ -34,9 +35,10 @@ class TemplateController extends Controller {
 	 * @since  0.1
 	 */
 	public function actionNew () {
-		if ($this->isAjaxRequest()) {
-			$this->renderPartial('new');
+		if (!RequestUtil::getInstance()->isAjaxRequest()) {
+			return false;
 		}
+		$this->renderPartial('new');
 	}
 
 	/**
@@ -46,9 +48,10 @@ class TemplateController extends Controller {
 	 * @since  0.1
 	 */
 	public function actionDetail () {
-		if ($this->isAjaxRequest()) {
-			$this->renderPartial('detail');
+		if (!RequestUtil::getInstance()->isAjaxRequest()) {
+			return false;
 		}
+		$this->renderPartial('detail');
 	}
 
 	/**
@@ -58,18 +61,23 @@ class TemplateController extends Controller {
 	 * @since  0.1
 	 */
 	public function actionEdit () {
-		if ($this->isAjaxRequest()) {
-			$this->renderPartial('edit');
+		if (!RequestUtil::getInstance()->isAjaxRequest()) {
+			return false;
 		}
+		$this->renderPartial('edit');
 	}
 
 	/**
-	 * Возвращает результат проверки, является ли запрос Ajax запросом.
+	 * Отдает дизайн для страницы редактирования записи
 	 *
 	 * @access public
-	 * @since  0.1
+	 * @since  0.11
+	 * @todo Вынести в отдельный класс
 	 */
-	protected function isAjaxRequest () {
-		return Yii::app()->request->isAjaxRequest || $this->debug;
+	public function rightsError () {
+		if (!RequestUtil::getInstance()->isAjaxRequest()) {
+			return false;
+		}
+		$this->renderPartial('error');
 	}
-} 
+}
