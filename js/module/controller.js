@@ -1,7 +1,7 @@
 /regular=[0-10]$\s+/;
 var ModuleDetailCtrl, ModuleEditCtrl, ModuleListCtrl, ModuleNewCtrl;
 
-ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile) {
+ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile, $location) {
   $scope.fields = {};
   $scope.files = [];
   ModuleAdd.get({
@@ -69,10 +69,11 @@ ModuleNewCtrl = function($scope, $routeParams, ModuleAdd, ModuleBreadcrumbs, $ti
       type_id: $routeParams.typeId,
       parent_id: $routeParams.pareId
     }, function(ok) {
-      $scope.okMessage = ok[0]['message'];
+      $scope.okMessage = ok[0]['message'] + '. Вы будете перенаправлены на список записей.';
       return $timeout(function() {
-        return $scope.okMessage = '';
-      }, 10000);
+        $scope.okMessage = '';
+        return $location.path('/module/' + $routeParams.pareId);
+      }, 3000);
     }, function(error) {
       $scope.errorMessage = error.data;
       return $timeout(function() {

@@ -14,7 +14,14 @@ class ModuleModule extends CWebModule {
 		);
 	}
 
+	/**
+	 * @param CController $controller
+	 * @param CAction     $action
+	 * @return bool
+	 */
 	public function beforeControllerAction ($controller, $action) {
+		$rights = 'module.'.$controller->getId().'.'.$action->getId();
+
 		if (parent::beforeControllerAction($controller, $action)) {
 
 			$controller->debug = true;

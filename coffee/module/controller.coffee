@@ -4,7 +4,7 @@ regular =
   \s+ #прямо посрдени регулярки
 ///
 
-ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile)->
+ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $compile, $location)->
   $scope.fields  = {}
   $scope.files = []
 
@@ -52,10 +52,11 @@ ModuleNewCtrl = ($scope,$routeParams, ModuleAdd, ModuleBreadcrumbs, $timeout, $c
       type_id:$routeParams.typeId
       parent_id:$routeParams.pareId
       (ok)->
-        $scope.okMessage = ok[0]['message']
+        $scope.okMessage = ok[0]['message']+'. Вы будете перенаправлены на список записей.'
         $timeout(->
           $scope.okMessage = ''
-        ,10000
+          $location.path('/module/'+$routeParams.pareId)
+        ,3000
         )
 
       (error)->

@@ -15,6 +15,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.extensions.file.*',
+		'application.extensions.request.*',
+		'application.extensions.log.*',
 	),
 
 	'modules'=>array(
